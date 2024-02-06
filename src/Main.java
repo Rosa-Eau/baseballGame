@@ -11,12 +11,6 @@ public class Main {
         int[] ansAry = new int[3];
         int answer;
 
-        // 랜덤 번호 생성 후 배열에 넣기
-        for (int i = 0; i < 3; i++) {
-            ansAry[i] = random.nextInt(9) + 1;
-        }
-
-        // 세 자리 숫자가 서로 다른지 확인
         do {
             // 세 자리 숫자가 다 다를 때까지 생성
             ansAry[0] = random.nextInt(9) + 1;
