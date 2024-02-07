@@ -9,9 +9,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int[] ansAry = new int[3];
-//        int answer;
 
-        // 세 자리 숫자가 서로 다른지 확인
         do {
             // 세 자리 숫자가 다 다를 때까지 생성
             ansAry[0] = random.nextInt(10);
