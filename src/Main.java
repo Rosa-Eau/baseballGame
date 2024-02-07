@@ -9,22 +9,18 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int[] ansAry = new int[3];
-        int answer;
-
-        // 랜덤 번호 생성 후 배열에 넣기
-        for (int i = 0; i < 3; i++) {
-            ansAry[i] = random.nextInt(9) + 1;
-        }
+//        int answer;
 
         // 세 자리 숫자가 서로 다른지 확인
         do {
             // 세 자리 숫자가 다 다를 때까지 생성
-            ansAry[0] = random.nextInt(9) + 1;
-            ansAry[1] = random.nextInt(9) + 1;
-            ansAry[2] = random.nextInt(9) + 1;
+            ansAry[0] = random.nextInt(10);
+            ansAry[1] = random.nextInt(10);
+            ansAry[2] = random.nextInt(10);
         } while (ansAry[0] == ansAry[1] || ansAry[1] == ansAry[2] || ansAry[0] == ansAry[2]);
 
-//        답 확인 테스트용
+        //        답 확인 테스트용
+//        System.out.println(Arrays.toString(ansAry));
 //        answer = ansAry[0] * 100 + ansAry[1] * 10 + ansAry[2];
 //        System.out.println("답 : " + answer);
 
@@ -34,7 +30,7 @@ public class Main {
 
         while (true) {
             // 숫자 입력받기
-            System.out.println("숫자를 입력하세요(게임을 종료하고 싶으면 0을 입력해주세요)");
+            System.out.println("세자리 숫자를 입력하세요(게임을 종료하고 싶으면 0을 입력해주세요)");
             System.out.print(">> ");
             inputNum = sc.nextInt();
 
@@ -52,7 +48,7 @@ public class Main {
 //          System.out.println(Arrays.toString(inputAry));
 
             if (checkNum(inputAry)) {
-                System.out.println("Error: 같은 숫자를 입력했습니다. 게임을 종료합니다.");
+                System.out.println("Error: 중복 숫자를 입력했습니다. 게임을 종료합니다.");
                 break;
             }
 
