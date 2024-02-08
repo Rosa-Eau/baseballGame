@@ -16,7 +16,7 @@ public class Main {
             ansAry[0] = random.nextInt(10);
             ansAry[1] = random.nextInt(10);
             ansAry[2] = random.nextInt(10);
-        } while (ansAry[0] == ansAry[1] || ansAry[1] == ansAry[2] || ansAry[0] == ansAry[2]);
+        } while (checkNum(ansAry));
 
         //        답 확인 테스트용
 //        System.out.println(Arrays.toString(ansAry));
